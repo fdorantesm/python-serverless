@@ -1,0 +1,25 @@
+[MASTER]
+ignore=venv
+
+[MESSAGES CONTROL]
+disable=C0111,  # Missing module docstring
+        C0103,  # Variable name doesn't conform to snake_case naming style
+        R0903,  # Too few public methods
+        C0114,  # Missing function docstring
+
+[FORMAT]
+max-line-length=100
+
+[DESIGN]
+max-args=5
+max-locals=15
+max-returns=6
+max-branches=12
+max-statements=50
+max-parents=7
+max-attributes=7
+min-public-methods=0
+max-public-methods=20
+
+[TYPECHECK]
+ignored-modules=boto3

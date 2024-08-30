@@ -1,0 +1,22 @@
+service: python-severless
+
+provider:
+  name: aws
+  runtime: python3.11
+
+functions:
+  health:
+    handler: src/infrastructure/http/handlers/health.handler
+    events:
+      - httpApi:
+          path: /health
+          method: get
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    layer: true
+
+plugins:
+  - serverless-python-requirements
+  - serverless-offline

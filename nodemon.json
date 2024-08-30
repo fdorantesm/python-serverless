@@ -1,0 +1,11 @@
+{
+  "exec": "npx sls offline",
+  "watch": [
+    "src/**/*.py",
+    "requirements.txt",
+    "serverless.yaml",
+    "venv/**/*",
+    "node_modules/**/*"
+  ],
+  "ext": "py"
+}
